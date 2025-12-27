@@ -1,0 +1,253 @@
+/* Literature Container */
+.literature-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Introduction Section */
+.intro-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Works Grid */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Literary Work Card */
+.literary-work {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body.dark-theme .literary-work {
+    background-color: #242424;
+    border-color: #333333;
+}
+
+.literary-work:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .literary-work:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.work-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+    letter-spacing: -0.5px;
+    flex: 1;
+}
+
+.work-type {
+    background-color: #8b5cf6;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.work-content {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.work-excerpt {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.8;
+    margin: 0;
+    font-style: italic;
+}
+
+.work-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    gap: 1rem;
+}
+
+.work-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.meta-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.read-full {
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.read-full:hover {
+    opacity: 0.8;
+}
+
+/* Literature Page Header - Dark Navigation Bar (if needed) */
+body .header {
+    background-color: var(--bg-color);
+}
+
+body.dark-theme .header {
+    background-color: #000000;
+    border-bottom: none;
+}
+
+body.dark-theme .header .logo {
+    color: #d3d3d3;
+}
+
+body.dark-theme .header .nav-link {
+    color: #d3d3d3;
+    padding: 0.5rem 0.75rem;
+    transition: background-color 0.2s;
+}
+
+body.dark-theme .header .nav-link:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+body.dark-theme .header .nav-link.active {
+    background-color: #2a2a2a;
+    color: #d3d3d3;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+body.dark-theme .header .icon-btn {
+    color: #ffffff;
+}
+
+body.dark-theme .header .icon-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design for Literature Page */
+@media (max-width: 768px) {
+    .literature-container {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .literary-work {
+        padding: 1.5rem;
+    }
+
+    .work-title {
+        font-size: 1.25rem;
+    }
+
+    .work-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .read-full {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .literature-container {
+        padding: 1rem;
+    }
+
+    .intro-section {
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .works-grid {
+        gap: 1rem;
+    }
+
+    .literary-work {
+        padding: 1.25rem;
+    }
+
+    .work-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}
+
